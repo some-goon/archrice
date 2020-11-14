@@ -1,0 +1,4 @@
+#!/bin/sh
+
+setxkbmap pl
+ssh-agent dwm

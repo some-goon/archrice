@@ -1,4 +1,8 @@
 #!/bin/sh
 
-setxkbmap pl
+#Script that runs when X is started
+
+#Runs .xprofile file
+. ~/.xprofile
+#Runs dwm
 ssh-agent dwm

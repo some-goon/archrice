@@ -44,7 +44,9 @@ acpi -b | awk -F'[,:%]' '{print $2, $3}' | {
 		fi
 	fi
 
+  	printf "%s %s" "$icon" "$capacity%"
 
-
-  printf "%s %s" "$icon" "$capacity%"
+  	if [ "$status" = Discharging ] && [ "$capacity" -lt 5 ]; then
+		systemctl hibernate
+	fi
 }

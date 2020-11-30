@@ -6,6 +6,7 @@ xcompmgr &
 keyremap &
 playerctld deamon &
 timidity -iA &
+unclutter &
 xwallpaper --zoom ~/.local/share/pape
 xinput set-prop 10 "libinput Accel Speed" -0.5
 export _JAVA_AWT_WM_NONREPARENTING=1

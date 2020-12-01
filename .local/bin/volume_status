@@ -1,0 +1,11 @@
+#!/bin/sh
+volume=$(pamixer --get-volume)
+if [ "$(pamixer --get-mute)" = true ] || [ "$volume" -eq 0 ]; then
+    icon="ﱝ"
+else
+    if [ "$volume" -ge 75 ]; then icon="墳"
+    elif [ "$volume" -ge 30 ]; then icon="奔"
+    else icon="奄"; fi
+fi
+
+printf "%s %s" "$icon" "$volume"

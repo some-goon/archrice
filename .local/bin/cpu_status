@@ -1,0 +1,4 @@
+#!/bin/sh
+
+temp=$(sensors | awk '/Package id 0/ {print "🌡" $4}')
+echo "$temp"

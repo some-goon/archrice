@@ -1,6 +1,16 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Prompt with no coloring:
+# PS1="%B[%n@%M %~]$%b "
+
+# Prompt with coloring:
+autoload -U color && colors
+PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[cyan]%}@%M %{$fg[blue]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+
+# Auto cd:
+setopt autocd
+
 # Emacs mode:
 bindkey -e
 
@@ -9,7 +19,7 @@ HISTFILE=~/.cache/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 
-# Completition:
+# Completion:
 autoload -Uz compinit
 zstyle ':completion:*' max-errors 5
 zstyle ':completion:*' menu select

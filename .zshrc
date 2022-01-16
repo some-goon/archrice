@@ -5,7 +5,7 @@
 # PS1="%B[%n@%M %~]$%b "
 
 # Prompt with coloring:
-autoload -U color && colors
+autoload -U colors && colors
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[cyan]%}@%M %{$fg[blue]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
 # Auto cd:

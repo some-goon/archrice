@@ -1,0 +1,18 @@
+#!/bin/sh
+LANG='en'
+while getopts 'l:' flag; do
+  case "${flag}" in
+    l) LANG="${OPTARG}"
+    shift
+    shift ;;
+    *) echo "Unknown flags passed!"
+    exit 1 ;;
+  esac
+done
+[ $# -eq 0 ] && echo "No arguments were supplied! Pass a path to a movie." && exit 2
+[ ! -f $1 ] && echo "Argument is not a file! Pass a path to a movie." && exit 3
+ENC="" && [ $LANG = "pl" ] && ENC="-e UTF8"
+OS="" && [ -f $HOME/.config/subliminal/opensubtitles ] && OS="--opensubtitles $(cat $HOME/.config/subliminal/opensubtitles)"
+A7="" && [ -f $HOME/.config/subliminal/addic7ed ] && A7="--addic7ed $(cat $HOME/.config/subliminal/addic7ed)"
+LT="" && [ -f $HOME/.config/subliminal/legendastv ] && LT="--legendastv $(cat $HOME/.config/subliminal/legendastv)"
+subliminal $OS $A7 $LT download -l $LANG -f $ENC $1

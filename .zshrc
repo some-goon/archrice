@@ -4,7 +4,6 @@ setopt autocd	 		# Auto directory change
 setopt nobeep			# Disable beeping
 setopt extendedglob		# Extended globing (allows the use of regular expressions)
 
-
 # Prompt with no coloring:
 # PS1="%B[%n@%M %~]$%b "
 
@@ -42,3 +41,5 @@ neofetch
 
 # Load syntax highlighting:
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
+# Load autosuggestions:
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh

@@ -2,7 +2,7 @@
 
 dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
 
-nvidia-settings --load-config-only &
+nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings --load-config-only &
 # xcompmgr &
 keyremap &
 # playerctld deamon &

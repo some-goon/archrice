@@ -1,5 +1,9 @@
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+# Options:
+setopt correct	 		# Command correction
+setopt autocd	 		# Auto directory change
+setopt nobeep			# Disable beeping
+setopt extendedglob		# Extended globing (allows the use of regular expressions)
+
 
 # Prompt with no coloring:
 # PS1="%B[%n@%M %~]$%b "
@@ -7,11 +11,6 @@
 # Prompt with coloring:
 autoload -U colors && colors
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[cyan]%}@%M %{$fg[blue]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
-
-# Auto cd:
-setopt autocd
-
-# Emacs mode:
 bindkey -e
 
 # History config:

@@ -36,6 +36,8 @@ alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 alias ip='ip -color=auto'
 alias ls='ls --color=auto'
+alias code='vscodium --extensions-dir "$XDG_DATA_HOME/vscode"'
+alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
 
 # Powerline go config:
 function powerline_precmd() {
@@ -62,8 +64,8 @@ if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
     install_powerline_precmd
 fi
 
-# Run neofetch:
-neofetch
+# Run pfetch:
+fastfetch
 
 # Load syntax highlighting:
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null

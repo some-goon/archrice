@@ -31,13 +31,14 @@ _comp_options+=(globdots)
 # Aliases:
 alias sudo='doas'
 alias pacman='paru'
+alias code='vscodium --extensions-dir "$XDG_DATA_HOME/vscode"'
+alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
 # Coloring aliases:
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 alias ip='ip -color=auto'
 alias ls='ls --color=auto'
-alias code='vscodium --extensions-dir "$XDG_DATA_HOME/vscode"'
-alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
+
 
 # Powerline go config:
 function powerline_precmd() {

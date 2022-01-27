@@ -23,3 +23,5 @@ export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 export KDEHOME="$XDG_CONFIG_HOME"/kde
 export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 export XAUTHORITY="$XDG_DATA_HOME"/xorg/Xauthority
+export WAKATIME_HOME="$XDG_CONFIG_HOME/wakatime"
+export GNUPGHOME="$XDG_DATA_HOME"/gnupg

@@ -28,17 +28,19 @@ zmodload zsh/complist
 compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
 _comp_options+=(globdots)
 
-# Aliases:
-alias sudo='doas'
-alias pacman='paru'
-alias code='vscodium --extensions-dir "$XDG_DATA_HOME/vscode"'
-alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
 # Coloring aliases:
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 alias ip='ip -color=auto'
 alias ls='ls --color=auto'
-
+# Aliases:
+alias sudo='doas'
+alias pacman='paru'
+alias code='vscodium --extensions-dir "$XDG_DATA_HOME/vscode"'
+alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
+alias dtfs='ls ~ -a -I . -I .. -I .ssh -I .cache -I .config -I .local -I .xprofile -I .zprofile | grep "^[.]"'
+alias rmdir='rm -rf'
+alias neofetch='fastfetch'
 
 # Powerline go config:
 function powerline_precmd() {

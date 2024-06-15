@@ -1,3 +1,0 @@
-#!/bin/sh
-ln -sf "$(readlink -f "$1")" "$HOME/.local/share/pape"
-xwallpaper --zoom "$HOME/.local/share/pape"

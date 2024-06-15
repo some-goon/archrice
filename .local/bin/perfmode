@@ -1,0 +1,4 @@
+#!/bin/sh
+qdbus org.kde.KWin /Compositor suspend
+notify-send "GameMode Started!"
+MANGOHUD=1

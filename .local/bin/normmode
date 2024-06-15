@@ -1,0 +1,4 @@
+#!/bin/sh
+qdbus org.kde.KWin /Compositor resume
+notify-send "GameMode ended"
+MANGOHUD=0
